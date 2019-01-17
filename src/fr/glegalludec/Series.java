@@ -16,6 +16,7 @@ public class Series {
 			Connection connexion = DriverManager.getConnection(DATABASE_URL, DATABASE_LOGIN, DATABASE_SECRET);
 			String requette = "INSERT INTO Serie (S_titre,S_realisateur,S_anneeSortie,S_anneeFin) VALUE (?,?, ?,?);";
 			PreparedStatement preparateur = connexion.prepareStatement(requette);
+			
 			preparateur.setString(1, "Casa de Papel");
 			preparateur.setInt(2, 2);
 			preparateur.setString(3, "2 mai 2017");
@@ -28,6 +29,10 @@ public class Series {
 			ajouterGenre(1, 1);
 			ajouterGenre(1, 2);
 		
+			Saisons.ajouterSaison(1, 2);
+			
+			Episodes.ajouterEpisode(1, 1,13 , 55, false);
+			Episodes.ajouterEpisode(1, 2,9 , 55, false);
 			
 			
 			preparateur.setString(1, "Sex and the city");
@@ -43,6 +48,16 @@ public class Series {
 			
 			ajouterGenre(2, 3);
 			
+			Saisons.ajouterSaison(2, 6);
+			
+			Episodes.ajouterEpisode(2, 1,12 , 30, false);
+			Episodes.ajouterEpisode(2, 2,18 , 30, false);
+			Episodes.ajouterEpisode(2, 3,18 , 30, false);
+			Episodes.ajouterEpisode(2, 4,18 , 30, false);
+			Episodes.ajouterEpisode(2, 5,8 , 30, false);
+			Episodes.ajouterEpisode(2, 6,20 , 30, false);
+			
+			
 			preparateur.setString(1, "Grey's Anatomy");
 			preparateur.setInt(2, 1);
 			preparateur.setString(3, "27 mars 2005");
@@ -54,6 +69,24 @@ public class Series {
 			
 			ajouterGenre(3, 4);
 			ajouterGenre(3, 5);
+			
+			Saisons.ajouterSaison(3, 15);
+			
+			Episodes.ajouterEpisode(3, 1,9 , 45, false);
+			Episodes.ajouterEpisode(3, 2,28 , 45, false);
+			Episodes.ajouterEpisode(3, 3,26 , 45, false);
+			Episodes.ajouterEpisode(3, 4,17, 45, false);
+			Episodes.ajouterEpisode(3, 5,24 , 45, false);
+			Episodes.ajouterEpisode(3, 6,24 , 45, false);
+			Episodes.ajouterEpisode(3, 7,22 , 45, false);
+			Episodes.ajouterEpisode(3, 8,24 , 45, false);
+			Episodes.ajouterEpisode(3, 9,24 , 45, false);
+			Episodes.ajouterEpisode(3, 10,24 , 45, false);
+			Episodes.ajouterEpisode(3, 11,24 , 45, false);
+			Episodes.ajouterEpisode(3, 12,24 , 45, false);
+			Episodes.ajouterEpisode(3, 13,24, 45, false);
+			Episodes.ajouterEpisode(3, 14,30, 45, false);
+			Episodes.ajouterEpisode(3, 15,8, 45, false);
 			
 			preparateur.setString(1, "Desperate Housewives");
 			preparateur.setInt(2, 4);
@@ -67,6 +100,17 @@ public class Series {
 			ajouterActeur(4, 12);
 			
 			ajouterGenre(4, 4);
+
+			Saisons.ajouterSaison(4, 8);
+			
+			Episodes.ajouterEpisode(4, 1,23 , 45, false);
+			Episodes.ajouterEpisode(4, 2,24 , 45, false);
+			Episodes.ajouterEpisode(4, 3,23 , 45, false);
+			Episodes.ajouterEpisode(4, 4,17 , 45, false);
+			Episodes.ajouterEpisode(4, 5,24 , 45, false);
+			Episodes.ajouterEpisode(4, 6,23 , 45, false);
+			Episodes.ajouterEpisode(4, 7,23 , 45, false);
+			Episodes.ajouterEpisode(4, 8,23 , 45, false);
 			
 			preparateur.setString(1, "Big Bang Theory");
 			preparateur.setInt(2, 5);
@@ -78,6 +122,23 @@ public class Series {
 			ajouterActeur(5, 14);
 			
 			ajouterGenre(5, 6);
+			
+			
+			Saisons.ajouterSaison(5, 12);
+			
+			Episodes.ajouterEpisode(5, 1,17 , 25, false);
+			Episodes.ajouterEpisode(5, 2,23 , 25, false);
+			Episodes.ajouterEpisode(5, 3,23 , 25, false);
+			Episodes.ajouterEpisode(5, 4,24 , 25, false);
+			Episodes.ajouterEpisode(5, 5,24 , 25, false);
+			Episodes.ajouterEpisode(5, 6,24 , 25, false);
+			Episodes.ajouterEpisode(5, 7,24 , 25, false);
+			Episodes.ajouterEpisode(5, 8,24 , 25, false);
+			Episodes.ajouterEpisode(5, 9,24 , 25, false);
+			Episodes.ajouterEpisode(5, 10,24 , 25, false);
+			Episodes.ajouterEpisode(5, 11,24 , 25, false);
+			Episodes.ajouterEpisode(5, 12,12 , 25, false);
+			
 			
 			preparateur.setString(1, "Charmed");
 			preparateur.setInt(2, 6);
